@@ -17,7 +17,7 @@
 
 </head>
 
-<body style="background-color: #fd97db; min-height: 100vh;" class="d-flex align-items-center justify-content-center">
+<body style="background-color: #fc5b8e; min-height: 100vh;" class="d-flex align-items-center justify-content-center">
 
     {{ $slot }}
 

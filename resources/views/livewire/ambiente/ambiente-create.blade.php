@@ -66,10 +66,10 @@
                 <a class="navbar-brand fw-bold fs-4 text-uppercase" style="color: #c156ff;">PROJETO IOT</a>
             </div>
             <ul class="nav nav-pills flex-column mb-auto gap-1">
-                <li><a href="/dashboard" class="nav-link custom-link active"><i
+                <li><a href="/dashboard" class="nav-link custom-link"><i
                             class="bi bi-house-door me-3 fs-5"></i><span>DASHBOARD</span></a></li>
                 <li class="nav-item-cadastro">
-                    <a href="/ambiente/create" class="nav-link custom-link ">
+                    <a href="/ambiente/create" class="nav-link custom-link active ">
                         <i class="bi bi-geo-fill me-3 fs-5"></i><span>AMBIENTE</span>
                     </a>
                     <div class="submenu-cadastro">
@@ -101,6 +101,58 @@
                     </div>
                 </div>
             </nav>
+            <div class="card shadow-sm border-0 p-9 p-md-5 rounded-5 bg-white d-flex justify-content-center" style="width:600px">
 
+                <div class="text-center mb-2">
+                    <i class="bi bi-geo-fill" style="font-size: 4rem; color: rgb(223, 225, 229);"></i>
+                    <h1 class="h2 fw-bold mb-8">CADASTRO - AMBIENTE</h1>
 
+                    <p class="text-muted small">Preencha os campos abaixo para registrar um novo ambiente.</p>
+                </div>
+
+                <div class="mb-6">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+
+                    </div>
+                </div>
+                <form wire:submit.prevent="store">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label small fw-bold text-secondary">NOME DO AMBIENTE</label>
+                        <input type="text" class="form-control rounded-pill border-light-subtle" id="nome"
+                            wire:model='nome' placeholder="Ex: Refeitório" required style="background-color: #fcfcfc;">
+                    </div>
+
+                    <div class="row">
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1"
+                                class="form-label small fw-bold text-secondary">DESCRIÇÃO</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="password" class="form-label small fw-bold text-secondary">STATUS</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
+                                <label class="form-check-label" for="radioDefault1">
+                                    Ativo
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2"
+                                    checked>
+                                <label class="form-check-label" for="radioDefault2">
+                                    Inativo
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="submit"
+                                class="btn btn-primary w-100 rounded-pill py-2 shadow-sm fw-bold">Cadastrar
+                                ambiente</button>
+                        </div>
+                </form>
+
+            </div>
         </div>
+    </div>
+</div>
